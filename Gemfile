@@ -1,14 +1,9 @@
-ruby '2.7.1'
+# frozen_string_literal: true
 
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
-end
+gemspec
 
-gem 'httparty'
-gem 'json'
-gem 'colorize'
-gem 'byebug'
-gem 'rspec'
+gem "rspec", "~> 3.12"
+gem "rake", "~> 13.0"
+gem "rubocop", "~> 1.21"
